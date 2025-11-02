@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شركة البطريق | Al Batreeq Trading Co.</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- شاشة التحميل -->
+  <div id="loader">
+    <div class="loader-content">
+      <img src="logo.png" alt="Logo" class="loader-logo" />
+      <div class="loader-circle"></div>
+    </div>
+  </div>
+
+  <!-- الترويسة -->
+  <header>
+    <div class="container">
+      <div class="logo-area">
+        <img src="logo.png" alt="Logo" />
+        <h1 id="title">شركة البطريق</h1>
+      </div>
+      <nav>
+        <a id="nav-home" href="#home">الرئيسية</a>
+        <a id="nav-about" href="#about">عن الشركة</a>
+        <a id="nav-sources" href="#sources">مصادر المنتجات</a>
+        <a id="nav-services" href="#services">الخدمات</a>
+        <a id="nav-contact" href="#contact">اتصل بنا</a>
+      </nav>
+      <button class="lang-btn" onclick="toggleLang()">EN</button>
+    </div>
+  </header>
+
+  <!-- القسم الترحيبي -->
+  <section class="hero" id="home">
+    <img src="logo.png" alt="Logo" />
+    <h2 id="hero-title">شــركة البطـريــق لاستيراد مــــواد البنــاء <br>والمـــــــواد الصحيــــة وملحقــــــاتها</h2>
+    <p id="hero-text"><br>
+      نوفّر منتجات عالية الجودة من أفضل الموردين حول العالم، لتلبية احتياجات السوق الليبي بأعلى معايير الجودة والخدمة.
+    </p>
+  </section>
+
+  <!-- عن الشركة -->
+  <section id="about">
+    <h2 id="about-title">عن الشركة</h2>
+    <p id="about-text">
+      نحن شركة متخصصة في استيراد وتوريد مواد البناء والمستلزمات الصحية وملحقاتها، نعمل على توفير منتجات بجودة عالمية من كبرى المصانع لضمان رضا عملائنا في جميع أنحاء ليبيا.
+    </p>
+  </section>
+
+  <!-- مصادر المنتجات -->
+  <section id="sources">
+    <h2 id="sources-title">مصادر منتجاتنا</h2>
+    <p id="sources-text">
+      نستورد منتجاتنا من كبرى المصانع العالمية في تركيا، إيطاليا، الصين، والإمارات وغيرها، لضمان الجودة والتنوع.
+    </p>
+    <div class="image-grid">
+      <img src="https://d2pi0n2fm836iz.cloudfront.net/301283/1216202117170661bb7492bfa6a.jpg" alt="مواد البناء" />
+      <img src="https://pahome.com/wp-content/uploads/2025/05/Modern-collection-of-white-sinks-with-unique-designs-by-a-leading-sanitary-ware-manufacturer-2048x1359.webp" alt="أدوات صحية" />
+      <img src="https://s.alicdn.com/@sc04/kf/H2228c8e930c042f9801650b16ecf1d56N.jpg?avif=close&webp=close" alt="إكسسوارات حمام" />
+    </div>
+  </section>
+
+  <!-- الخدمات -->
+  <section id="services">
+    <h2 id="services-title">خدماتنا</h2>
+    <ul id="services-list">
+      <li>الاستيراد والتوريد بجودة المصنع الأصلي</li>
+      <li>خدمة البيع بالجملة والتجزئة</li>
+      <li>استشارات فنية لتحديد المنتجات المناسبة للمشاريع</li>
+      <li>التوصيل إلى جميع المدن الليبية</li>
+    </ul>
+  </section>
+
+  <!-- اتصل بنا -->
+  <section id="contact">
+    <h2 id="contact-title">اتصل بنا</h2>
+    <p id="contact-text">
+      العنوان: الفلاح – طرابلس<br />
+      الهاتف: 0918888981<br />
+      البريد الإلكتروني: ma4551872@gmail.com
+    </p>
+  </section>
+
+  <!-- التذييل -->
+  <footer>
+    <p id="footer-text">
+      © 2025 شركة البطريق لاستيراد مواد البناء والصحية وملحقاتها – جميع الحقوق محفوظة.
+    </p>
+  </footer>
+
+  <!-- زر الصعود للأعلى -->
+  <button id="toTop" onclick="scrollToTop()">⬆</button>
+
+  <!-- كود الجافاسكربت -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    // شاشة التحميل
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      setTimeout(() => loader.classList.add("hidden"), 400);
+    });
+
+    const translations = {
+      ar: {
+        title: "شركة البطريق",
+        heroTitle: "شركة البطريق لاستيراد مواد البناء والصحية وملحقاتها",
+        heroText: "نوفّر منتجات عالية الجودة من أفضل الموردين حول العالم، لتلبية احتياجات السوق الليبي بأعلى معايير الجودة والخدمة.",
+        nav: ["الرئيسية", "عن الشركة", "مصادر المنتجات", "الخدمات", "اتصل بنا"],
+        aboutTitle: "عن الشركة",
+        aboutText: "نحن شركة متخصصة في استيراد وتوريد مواد البناء والمستلزمات الصحية وملحقاتها، نعمل على توفير منتجات بجودة عالمية من كبرى المصانع لضمان رضا عملائنا في جميع أنحاء ليبيا.",
+        sourcesTitle: "مصادر منتجاتنا",
+        sourcesText: "نستورد منتجاتنا من كبرى المصانع العالمية في تركيا، إيطاليا، الصين، والإمارات وغيرها، لضمان الجودة والتنوع.",
+        servicesTitle: "خدماتنا",
+        servicesList: [
+          "الاستيراد والتوريد بجودة المصنع الأصلي",
+          "خدمة البيع بالجملة والتجزئة",
+          "استشارات فنية لتحديد المنتجات المناسبة للمشاريع",
+          "التوصيل إلى جميع المدن الليبية"
+        ],
+        contactTitle: "اتصل بنا",
+        contactText: "العنوان: الفلاح – طرابلس\nالهاتف: 0918888981\nالبريد الإلكتروني: ma4551872@gmail.com",
+        footer: "© 2025 شركة البطريق لاستيراد مواد البناء والصحية وملحقاتها – جميع الحقوق محفوظة.",
+      },
+      en: {
+        title: "Al Batreeq Trading Co.",
+        heroTitle: "Al Batreeq Trading Co. for Construction & Sanitary Materials",
+        heroText: "We provide high-quality construction and sanitary products from trusted global suppliers, meeting Libyan market needs with excellence and reliability.",
+        nav: ["Home", "About", "Sources", "Services", "Contact"],
+        aboutTitle: "About Us",
+        aboutText: "We specialize in importing and supplying construction and sanitary materials, offering world-class quality products from leading manufacturers to ensure customer satisfaction across Libya.",
+        sourcesTitle: "Our Product Sources",
+        sourcesText: "We source our products from major global factories in Turkey, Italy, China, and the UAE to guarantee quality and variety.",
+        servicesTitle: "Our Services",
+        servicesList: [
+          "Import and supply with original factory quality",
+          "Wholesale and retail distribution",
+          "Technical consultation for project product selection",
+          "Delivery service across all Libyan cities"
+        ],
+        contactTitle: "Contact Us",
+        contactText: "Address: Al Falah – Tripoli\nPhone: +218 91 888 8981\nEmail: ma4551872@gmail.com",
+        footer: "© 2025 Al Batreeq Trading Co. – All rights reserved.",
+      },
+    };
+
+    let currentLang = "ar";
+
+    window.toggleLang = function () {
+      const html = document.documentElement;
+      const btn = document.querySelector(".lang-btn");
+      const t = translations[currentLang === "ar" ? "en" : "ar"];
+      html.lang = currentLang === "ar" ? "en" : "ar";
+      html.dir = currentLang === "ar" ? "ltr" : "rtl";
+      btn.innerText = currentLang === "ar" ? "AR" : "EN";
+
+      document.body.style.transition = "opacity 0.4s";
+      document.body.style.opacity = "0.4";
+
+      setTimeout(() => {
+        document.getElementById("title").innerText = t.title;
+        document.getElementById("hero-title").innerText = t.heroTitle;
+        document.getElementById("hero-text").innerText = t.heroText;
+        const navIds = ["nav-home", "nav-about", "nav-sources", "nav-services", "nav-contact"];
+        navIds.forEach((id, i) => (document.getElementById(id).innerText = t.nav[i]));
+        document.getElementById("about-title").innerText = t.aboutTitle;
+        document.getElementById("about-text").innerText = t.aboutText;
+        document.getElementById("sources-title").innerText = t.sourcesTitle;
+        document.getElementById("sources-text").innerText = t.sourcesText;
+        document.getElementById("services-title").innerText = t.servicesTitle;
+        document.getElementById("services-list").innerHTML = t.servicesList.map(li => `<li>${li}</li>`).join("");
+        document.getElementById("contact-title").innerText = t.contactTitle;
+        document.getElementById("contact-text").innerText = t.contactText;
+        document.getElementById("footer-text").innerText = t.footer;
+
+        document.body.style.opacity = "1";
+        currentLang = currentLang === "ar" ? "en" : "ar";
+      }, 250);
+    };
+
+    // زر العودة للأعلى
+    const toTop = document.getElementById("toTop");
+    window.addEventListener("scroll", () => {
+      if (document.documentElement.scrollTop > 300)
+        toTop.style.display = "block";
+      else toTop.style.display = "none";
+    });
+
+    window.scrollToTop = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // إظهار الأقسام بالتدريج
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+      sections.forEach((sec) => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) sec.classList.add("visible");
+      });
+    });
+
+    document.body.style.opacity = "1";
+  });
+  </script>
+
+</body>
+</html>
